@@ -20,9 +20,9 @@ Edit file `appsettings.json`
 ![Generate QR-Code](wwwroot/img/GenerateQRCode.jpg)
 ![Result](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/view%20%26%20Export%20QRCode.jpg)
 ![Generate QR-Code](wwwroot/img/QRReader.jpg)
-![Generate QR-Code](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Scan%20QR%20camera.jpg)
-![Generate QR-Code](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Scan%20QR.jpg)
-![Generate QR-Code](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Resuslt%20Scan.jpg)
+![Camera](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Scan%20QR%20camera.jpg)
+![scan](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Scan%20QR.jpg)
+![Result Scan](https://github.com/fajarafriandaputra/Liebra-Permana-QRCode/blob/master/wwwroot/img/Resuslt%20Scan.jpg)
 
 
   
