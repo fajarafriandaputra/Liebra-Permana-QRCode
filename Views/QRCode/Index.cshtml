@@ -1,0 +1,60 @@
+﻿@{
+    ViewData["Title"] = "Generate QRCode";
+}
+@model Liebra_Permana.Models.QRCodeGenerateModel
+
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <input asp-for="Id" type="hidden" />
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="QRCodeValue" class="control-label"></label>
+                <input asp-for="QRCodeValue" class="form-control" style="text-transform:uppercase" />
+                <span asp-validation-for="QRCodeValue" class="text-danger"></span>
+            </div>
+            <div class="form-group mt-3">
+                @if (Model.ImagecodeGenerator == null)
+                {
+                    <input type="submit" value="Generate QR Code" class="btn btn-outline-info text-center" />
+                }
+                else
+                {
+                    <a asp-action="Index" asp-controller="QRCode" class="btn btn-outline-info text-center">Generate New QR Code</a>
+                }
+
+            </div>
+            <div class="form-group mt-3">
+
+                @if (Model.ImagecodeGenerator != null)
+                {
+                    <div id="pdf">
+                        <img src="@Model.ImagecodeGenerator" class="img-thumbnail" />
+                    </div>
+                    <input type="button" onclick="printPDF()" class="btn btn-outline-info text-center" value="Export PDF" />
+                }
+                else
+                {
+
+                }
+
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+
+    <script>
+            function printPDF() {
+                var doc = new jsPDF();
+                doc.addHTML($('#pdf')[0], 15, 15, {
+                    'background': '#fff',
+                }, function () {
+                    doc.save('sample-file.pdf');
+                });
+            }
+    </script>
+}

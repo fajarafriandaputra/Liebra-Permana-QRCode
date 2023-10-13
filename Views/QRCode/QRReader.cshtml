@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Reader QR-Code";
+}
+@model Liebra_Permana.Models.QRCodeGenerateModel
+
+
+<div class="row">
+    <form asp-action="QRReaderSubmit">
+        <input asp-for="Id" type="hidden" />
+        <div class="col-sm-7">
+            <div class="mb-3 row">
+                <label asp-for="QRCodeValue" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="QRCodeValue" type="text" readonly class="form-control-plaintext">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="CreatedBy" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="CreatedBy" type="text" readonly class="form-control-plaintext">
+                </div>
+
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="CreatedDate" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <input asp-for="CreatedDate" type="text" readonly class="form-control-plaintext">
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <label asp-for="Remark" class="col-sm-2 col-form-label"></label>
+                <div class="col-sm-10">
+                    <textarea asp-for="Remark" class="form-control" rows="5"></textarea>
+                </div>
+            </div>
+            <div class="row g-2 justify-content-end">
+                <div class="col-auto">
+                    <input type="submit" value="Submit" class="btn btn-outline-info text-center" />
+                </div>
+                <div class="col-auto">
+                    @*<input type="reset" value="Cancel" class="btn btn-outline-danger text-center" />*@
+                    <a asp-action="QRCodeReader" asp-controller="QRCode" class="btn btn-outline-danger text-center">Cancel</a>
+                </div>
+            </div>
+        </div>
+    </form>
+    <div class="col-sm-5">
+        @*<img src="@Model.ImagecodeGenerator" class="img-thumbnail" />*@
+    </div>
+</div>
+
+
+
